@@ -4,16 +4,19 @@
 /*Global defaults/modifiers*/
 body {
     /*rem multiplies the measurement by ~16px*/
-    size: 1rem;
+    font-size: 1rem;
     color: bisque;
     background-color: #010c13;
     font-family: 'Roboto', sans-serif;
-    margin: 1rem 10rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
 }
 
 /*links*/
 a {
     text-decoration: none;
+    color: bisque;
 }
 
 a:visited {
@@ -37,9 +40,19 @@ p {
     margin: 0rem 0rem;
 }
 
+img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
 iframe {
     width: 100%;
     aspect-ratio: 16/9;
+}
+
+button {
+    width: 100%;
 }
 
 /*header items*/
@@ -95,17 +108,25 @@ footer {
 /*projects*/
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
 }
 
 /*about*/
+.me {
+    display: flex;
+}
+
 .bio {
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    margin-right: 60%;
-    gap: 1rem;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.bio p {
+    line-height: 1.5;
 }
 
 /*contact*/
@@ -116,4 +137,24 @@ form {
     margin: 1rem;
     margin-right: 75%;
     gap: 0.5rem;
+}
+
+/*media query for display changes for mobile*/
+@media (max-width: 600px) {
+
+    /*header*/
+    .header div {
+        flex-direction: column;
+    }
+
+    .header div span:not(:last-child)::after {
+        content: none;
+        margin-left: 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    /**/
 }
