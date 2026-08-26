@@ -1,71 +1,119 @@
-/*Written by Bradlee Logan*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Written and notated by Bradlee Logan */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Global defaults/modifiers*/
+body {
+    /*rem multiplies the measurement by ~16px*/
+    size: 1rem;
+    color: bisque;
+    background-color: #010c13;
+    font-family: 'Roboto', sans-serif;
+    margin: 1rem 10rem;
 }
 
-body {
-    background-color: #0f0f0f;
-    color: #ffffff;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/*links*/
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: bisque;
+}
+
+a:hover {
+    color: cadetblue;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    padding-left: 20px;
-    padding-top: 20px;
-}
-
-p {
-    color: #888888;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-left: 20px;
-}
-
-#work {
-    padding: 60px 40px;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #888888;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    margin: 0.5rem 0rem;
 }
 
-.video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+p {
+    margin: 0rem 0rem;
 }
 
-.video-item {
-    flex: 1 1 400px;
-    max-width: 600px;
-}
-
-.video-item iframe {
+iframe {
     width: 100%;
     aspect-ratio: 16/9;
-    border: none;
 }
 
-.video-item h3 {
-    margin-top: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
+/*header items*/
+.name {
+    font-size: 5rem;
+    margin: 0px;
 }
 
-.video-item p {
-    margin-top: 6px;
-    font-size: 13px;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*adds a | after each of my labels, except the last one*/
+.header div span:not(:last-child)::after {
+    content: "|";
+    margin-left: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/*footer items*/
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+/*index*/
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainPage iframe {
+    min-width: 50%;
+    width: 70%;
+    margin: 2rem;
+}
+
+/*projects*/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+/*about*/
+.bio {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    margin-right: 60%;
+    gap: 1rem;
+}
+
+/*contact*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 1rem;
+    margin-right: 75%;
+    gap: 0.5rem;
 }

@@ -1,0 +1,35 @@
+<!--Written by Bradlee Logan-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <h1>Contact</h1>
+    <main>
+        <!--submits to formsubmit which sends to my email to avoid spam/bots-->
+        <form action="https://formsubmit.co/bradleemlogan@gmail.com" method="POST">
+            <!--name field-->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <!--email field-->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <!--message field-->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <!--button to send email/message-->
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/headerFooter.js"></script>
+</body>
+
+</html>
