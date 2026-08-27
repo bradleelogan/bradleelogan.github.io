@@ -134,14 +134,14 @@ form {
     align-items: flex-start;
     margin: 1rem;
     gap: 0.5rem;
-    max-width: 50%;
 }
 
 input {
-    max-width: 50%;
+    width: 25%;
 }
 
 textarea {
+    width: 50%;
     min-height: 150px;
 }
 
