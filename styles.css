@@ -45,10 +45,6 @@ iframe {
     aspect-ratio: 16/9;
 }
 
-button {
-    width: 100%;
-}
-
 /*header items*/
 .name {
     font-size: 5rem;
@@ -135,7 +131,7 @@ footer {
 form {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     margin: 1rem;
     gap: 0.5rem;
     max-width: 50%;
@@ -179,22 +175,11 @@ form p {
         flex-direction: column;
     }
 
-
     .header div {
         align-self: flex-start;
         margin-bottom: 1rem;
     }
 
-    /*
-    .header div span:not(:last-child)::after {
-        content: none;
-        margin-left: 0;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-*/
     /*projects*/
     .projects {
         grid-template-columns: 1fr;
