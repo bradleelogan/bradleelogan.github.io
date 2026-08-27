@@ -163,9 +163,15 @@ form p {
     }
 
     /*about*/
+    .bio {
+        width: 90%;
+    }
+
     .me {
         flex-direction: column;
     }
+
+
 }
 
 /*media query for display changes for small screens*/
